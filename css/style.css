@@ -23,6 +23,9 @@
     --color-neutral-900:#000;
     --color-neutral-100:#fff;
 
+    --box-shadow: 0 0 1em rgba(102, 60, 180, 0.15);
+    
+
     /* --font-family-primary:;
     --font-family-secondry:; */
 
@@ -189,6 +192,14 @@ prefer not to see them */
   font-weight: var(--font-weight-900);
 }
 
+.gap-300{
+  padding: 1em;
+}
+
+.gap-400{
+  padding: 1.5em;
+}
+
 .container{
   --max-width:1000px;
   --container-padding:var(--padding-spacer-500);
@@ -224,7 +235,9 @@ body{
   font-family: var(--font-family-body);
   color: var(--color-neutral-900);
   overflow-x: hidden;
+  line-break: auto;
 }
+
 /* logo */
 .logo a{
   flex-direction: row;
@@ -257,8 +270,6 @@ body{
 }
 
 
-
-
 /* navigation */
 
 .navigation{
@@ -272,9 +283,24 @@ body{
 .nav-list a{
   list-style: none;
   text-decoration: none;
-  padding: var(--padding-spacer-300);
+  margin: var(--padding-spacer-300);
   color: var(--color-primary-500);
 }
+.skils-details{
+  border: 1px solid var(--color-primary-500);
+  border-radius: var(--border-radius-400);
+  margin: var(--margin-gap-500);
+  box-shadow: 0 0 1em rgba(42, 19, 68, 0.15);
+  text-align: center;
+  font-size: var(--font-size-600);
+  font-weight: var(--font-weight-700);
+  color: var(--color-primary-500);
+  text-shadow: 1px .1px var(--color-neutral-100);
+}
+.skils-details img{
+  margin-inline: auto;
+}
+
 
 @media (min-width:45em) {
   .nav-bar{
@@ -397,6 +423,40 @@ body{
   }  
 }
 
+/* components */
+
+/* button */
 .button{
-  margin-top: var(--margin-gap-600);
+  cursor: pointer;
+  text-decoration: none;
+  border: 0;
+  border-radius: 100vmax;
+  line-height: 1;
+  padding: .7em 1.1em;
+  background-color: var(--color-primary-500);
+  color: var(--color-neutral-100);
+  box-shadow: var(--box-shadow);
+
+  margin-top: var(--margin-gap-500);
+}
+
+.button[data-type="inverted"]{
+  background-color: var(--color-neutral-100);
+  color: var(--color-primary-500);
+}
+
+.button a {
+  text-decoration: none;
+}
+
+
+/* cards */
+.card-1, .card-2{
+  padding: var(--padding-spacer-500);
+  box-shadow: 0 0 1em rgba(102, 60, 180, 0.15);
+  border-radius: var(--border-radius-400);
+  margin: var(--margin-gap-400);
+}
+.card-colum{
+  flex-direction: column;
 }
