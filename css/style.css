@@ -49,7 +49,7 @@
     --font-size-heading:var(--font-size-600);
     --font-size-body:var(--font-size-500);
     --font-size-nav:var(--font-size-800);
-    --font-size-button:var(--font-size-700);
+    --font-size-button:var(--font-size-500);
     
 }
 
@@ -448,7 +448,7 @@ body{
   background-color: var(--color-primary-500);
   color: var(--color-neutral-100);
   box-shadow: var(--box-shadow);
-
+  font-size: var(--font-size-button);
   margin-top: var(--margin-gap-500);
 }
 
@@ -459,6 +459,12 @@ body{
 
 .button a {
   text-decoration: none;
+}
+.cta .button {
+  font-size: var(--font-size-300);
+  margin-top: 0;
+  background-color: var(--color-neutral-100);
+  color: var(--color-primary-500);
 }
 
 
@@ -471,4 +477,57 @@ body{
 }
 .card-colum{
   flex-direction: column;
+}
+
+
+/* cta */
+.cta{
+  position: relative;
+  background-color: var(--color-primary-500);
+  color: var(--color-neutral-100);
+  margin-bottom: 0;
+}
+.cta .even-colums{
+  justify-content: space-between;
+  padding-block: 4rem
+}
+.cta p {
+  padding-top: var(--padding-spacer-500);
+}
+.cta-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.cta-wave .shape-fill {
+  fill: #FFFFFF;
+}
+.cta-wave svg {
+  position: relative;
+  display: block;
+  width: calc(148% + 1.3px);
+  height: 39px;
+  transform: rotateY(180deg);
+}
+
+@media (min-width: 45em) {
+  .cta-wave svg {
+    width: calc(102% + 1.3px);
+    height: 69px;
+  }
+  .cta .even-colums {
+    padding-top: 6rem;
+  }
+  
+}
+
+
+/* footer */
+
+footer{
+  background-color: rgba(0, 0, 0, 0.9);
+  color: var(--color-neutral-100);
 }
