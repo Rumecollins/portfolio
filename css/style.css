@@ -404,10 +404,7 @@ h3{
 .hero{
   margin-top: 10rem;
   background-color: rgba(238, 255, 255, 0.74);
-  padding: var(--padding-spacer-500);
-  margin-right: var(--margin-gap-400);
-  border-top-right-radius: var(--border-radius-300);
-  border-bottom-right-radius: var(--border-radius-300);
+  padding-block: var(--padding-spacer-500);
 }
 
 .hero-avater{
@@ -425,6 +422,12 @@ h3{
 }
 
 @media (min-width:45em) {
+  .hero{
+    padding: var(--padding-spacer-500);
+    margin-right: var(--margin-gap-400);
+    border-top-right-radius: var(--border-radius-300);
+    border-bottom-right-radius: var(--border-radius-300);
+  }
   .hero-avater{
     border-top-right-radius: 0rem;
     margin-bottom: 0;
