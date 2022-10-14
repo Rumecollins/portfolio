@@ -606,6 +606,7 @@ h3{
   margin: 1em;
   min-height: 20vh;
   position: relative;
+  z-index: -2000;
 
 }
 
@@ -617,8 +618,7 @@ h3{
   min-height: 15vh;
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius-300);
-  position: relative;
-  z-index: -2000;
+ 
 }
 
 @media screen and (min-width:45em) {
