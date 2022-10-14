@@ -643,7 +643,7 @@ footer{
   padding-top: 5em;
   padding-bottom: 1.5em;
   text-align: center;
-  font-size: var(--font-size-700);
+  font-size: var(--font-size-600);
   font-weight: var(--font-weight-500);
   position: relative;
   z-index: -100;
