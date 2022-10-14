@@ -604,7 +604,7 @@ h3{
   justify-content: space-around;
   align-items: center;
   margin: 1em;
-  min-height: 20vh
+  min-height: 20vh;
 }
 
 .blog-img{
@@ -615,6 +615,8 @@ h3{
   min-height: 15vh;
   box-shadow: var(--box-shadow);
   border-radius: var(--border-radius-300);
+  position: relative;
+  z-index: -20;
 }
 
 @media screen and (min-width:45em) {
