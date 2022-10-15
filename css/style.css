@@ -444,7 +444,7 @@ h3{
 }
 .hero-title{
   background-color: var(--color-primary-500);
-  color: var(--color-neutral-100);
+  color: #eee;
   padding: var(--padding-spacer-500);
   flex-direction: column;
   justify-content: center;
@@ -561,12 +561,12 @@ h3{
 
 /* cta */
 .cta{
-  color: var(--color-neutral-100);
+  background-color: var(--color-primary-500);
+  color: #eee;
   margin-bottom: -4em;
   margin-inline: .5em;
   position: relative;
   z-index: -2;
-  background-color: var(--color-primary-500);
   border-radius: var(--border-radius-300);
 }
 .cta .even-colums{
