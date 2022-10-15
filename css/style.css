@@ -18,7 +18,7 @@
     --color-primary-500:#282c75;
     --color-primary-900:#1b1a22;
     --color-accent-500:#f0e550f3;
-    --color-accent-300:;
+    --color-accent-300: rgb(240, 252, 252);
     --color-neutral-900:#000;
     --color-neutral-100:#fff;
     --color-hover-100:rgba(255, 255, 255, 0.397);
@@ -263,7 +263,7 @@ h2{
 h3{
   font-family: var(--font-family-heading);
   text-decoration: underline;
-  color: #322;
+  color: var(--color-neutral-900);
   font-weight: var(--font-weight-700);
   font-size: var(--font-size-700);
 }
@@ -346,7 +346,7 @@ h3{
 @media (max-width:45em) {
   .nav-list{
     text-align: center;
-    background: rgba(255, 255, 255, 0.895);
+    background: var(--color-neutral-100);
     box-shadow: 0 0 1em rgba(42, 19, 68, 0.15);
     border-bottom-left-radius: var(--border-radius-300);
     border-bottom-right-radius: var(--border-radius-300);
@@ -397,14 +397,35 @@ h3{
     display: none;
   }
 
+
   .fa-close, .fa-bars{
     color: var(--color-primary-500);
   }
 
   .mode-styling{
-    padding-block: 1.5rem 1rem;
+    width: 1.5em;
+    margin: 1em auto;
+    padding: 0;
   }
 }
+
+@media (min-width:45em) {
+  .mode-styling{
+    margin: .2em 1em;
+  }
+}
+  
+.mode-styling [data-visible="false"]{
+  display: none;
+}
+.fa-toggle-off{
+  color: #282c75;
+  background-color: #eee;
+  border-radius: 100%;
+  padding: 0px;
+  
+}
+
 
 
 
@@ -412,7 +433,7 @@ h3{
 
 .hero{
   margin-top: 6.7rem;
-  background-color: rgba(238, 255, 255, 0.74);
+  background-color: var(--color-accent-300);
   padding-block: var(--padding-spacer-500);
 }
 
@@ -460,7 +481,7 @@ h3{
 
 /* skills */
 .skills{
-  background-color: rgba(238, 255, 255, 0.74);
+  background-color:var(--color-accent-300);
   padding: var(--padding-spacer-400);
   margin-left: var(--margin-gap-400);
   border-top-left-radius: var(--border-radius-300);
@@ -576,7 +597,7 @@ h3{
   display: none;
 }
 .cta-wave .shape-fill {
-  fill: #FFFFFF;
+  fill: var(--color-neutral-100);
 }
 .cta-wave svg {
   position: relative;
