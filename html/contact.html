@@ -4,9 +4,118 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a6848b900f.js" crossorigin="anonymous"></script>
     <title>Contact</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/app.js" defer></script>
 </head>
 <body>
+    <header class="navigation">
+        <div class="container">
+            <div class="primary-navigation | even-colums">
+                <div class="logo"> 
+                    <a href="../index.html" class="even-colums">
+                        <div class="logo-design">
+                            <span class="first-letter-logo">R</span>
+                            <span class="second-letter-logo">C</span>
+                        </div>
+                        <span class="logo-profile-name">Rumecollins</span>
+                    </a>
+                </div>
+
+                <nav  class="even-colums nav-bar">
+                    <button class="mobile-nav-toggle" aria-controls="nav-list" aria-expanded="false" aria-hidden="true">
+                        <span class="screen-reader-only">Menu</span>
+                        <i id="fa-open" class="fa-solid fa-bars hidden"></i>
+                        <i id="fa-close" class="fa-solid fa-xmark fa-close"></i>
+                    </button>
+                    <ul id="nav-list" data-visible="false" role='list' aria-expanded="false" class="nav-list even-colums " >
+                        <li><a class="underline" href="../html/project.html" target="_blank" rel="noopener noreferrer">Projects</a></li> 
+                        <li><a class="underline" href="../html/blogs.html" target="_blank" rel="noopener noreferrer">Blog</a></li>
+                        <li><a class="underline" href="../html/about.html">About</a></li>
+                        <li><a class="underline" href="../html/contact.html">Contact</a></li>
+                        <div class="mode-styling">
+                            <i class="fa-solid fa-toggle-off" data-visible="false" style="font-size:24px"></i>
+                            <i class="fa-solid fa-toggle-on " data-visible="true" style="font-size:24px"></i>     
+                        </div>
+                    </ul>
+                    
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section >
+            <div class="menu-bg">
+                <h1 class="menu-h1">Contact Me</h1>
+            </div>
+            <div class="container even-colums">
+                <div class="contact-left-side ">
+                    <h2>Let's Get in Touch</h2>
+                    <p>Urhomovocollinsrume@gmail.com</p>
+                    <p>09076158060</p>
+                    <div class="contact-social-icon">
+
+                    </div>
+                    <a href="../image/Resume.pdf" download="../image/Resume.pdf" class="contact-btn" target="_blank">Resume</a>
+                </div>
+                <div class="contact-right-side">
+                    <form name="submit-to-google-sheet">
+                        <fieldset>
+                            <legend>Details</legend>
+                            <input type="text" name="Name" placeholder="Full Name" required><br>
+                            <input type="email" placeholder="E-mail" name="Email" required><br>
+                            <input type="text" placeholder="Topic" name="Topic"><br>
+                            <textarea name="Message"  rows="7" placeholder="Message"></textarea><br>
+                            <button class="contact-btn" type="submit">Summit</button><br>
+                            <span id="contact-mgs"></span>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p > Find me elsewhere on the web as well: </p>
+                  <ul role="list" class="social-list even-colums">
+                    <li>
+                      <a href="#"><i class="fa fa-linkedin-square footer-fa hover" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-twitter footer-fa hover" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                      <a href="https://codepen.io/Rumecollins"><i class="fa fa-codepen footer-fa hover" aria-hidden="true"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/Rumecollins "><i class="fa fa-github footer-fa hover" aria-hidden="true"></i></a>
+                    </li>
+                  </ul>
+                  <p> ©2022 Rume collins. </p>  
+            </div>
+        </footer>
+    </main>
     
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzQD1ZYgMtaslhIEZon4ldP0l7KZWabit0ga9vrJGHyN7qfyne1KRc8UddRJ3gkrHRy/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const contactMgs = document.getElementById("contact-mgs")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                contactMgs.innerHTML = "message sent successfully"
+                setTimeout(function(){
+                    contactMgs.innerHTML = ""
+                },4000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>      
 </body>
 </html>

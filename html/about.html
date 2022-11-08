@@ -4,9 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a6848b900f.js" crossorigin="anonymous"></script>
     <title>About</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/app.js" defer></script>
 </head>
 <body>
+    <header class="navigation">
+        <div class="container">
+            <div class="primary-navigation | even-colums">
+                <div class="logo"> 
+                    <a href="../index.html" class="even-colums">
+                        <div class="logo-design">
+                            <span class="first-letter-logo">R</span>
+                            <span class="second-letter-logo">C</span>
+                        </div>
+                        <span class="logo-profile-name">Rumecollins</span>
+                    </a>
+                </div>
+
+                <nav  class="even-colums nav-bar">
+                    <button class="mobile-nav-toggle" aria-controls="nav-list" aria-expanded="false" aria-hidden="true">
+                        <span class="screen-reader-only">Menu</span>
+                        <i id="fa-open" class="fa-solid fa-bars hidden"></i>
+                        <i id="fa-close" class="fa-solid fa-xmark fa-close"></i>
+                    </button>
+                    <ul id="nav-list" data-visible="false" role='list' aria-expanded="false" class="nav-list even-colums " >
+                        <li><a class="underline" href="../html/project.html" target="_blank" rel="noopener noreferrer">Projects</a></li> 
+                        <li><a class="underline" href="../html/blogs.html" target="_blank" rel="noopener noreferrer">Blog</a></li>
+                        <li><a class="underline" href="../html/about.html">About</a></li>
+                        <li><a class="underline" href="../html/contact.html">Contact</a></li>
+                        <div class="mode-styling">
+                            <i class="fa-solid fa-toggle-off" data-visible="false" style="font-size:24px"></i>
+                            <i class="fa-solid fa-toggle-on " data-visible="true" style="font-size:24px"></i>     
+                        </div>
+                   </ul>
+                    
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="menu-bg">
+                <h1 class="menu-h1">About me</h1>
+            </div>
+        </section>
+
+        <!-- cta section -->
+
+        <section class="cta" >
+            <div class="container even-colums" data-type="inverted" >
+                <p class="--font-size-600">You Have questions, collaborations and  project in mind? </p>
+            <button class="button"><a href="../html/contact.html">GET IN TOUCH</a></button>
+            </div>
+            <div class="cta-wave">
+                <svg data-name="Layer 1"  viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p > Find me elsewhere on the web as well: </p>
+              <ul role="list" class="social-list even-colums">
+                <li>
+                  <a href="#"><i class="fa-brands fa-linkedin footer-fa hover" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-square-twitter footer-fa hover" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="https://codepen.io/Rumecollins"><i class="fa-brands fa-codepen footer-fa hover" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/Rumecollins "><i class="fa-brands fa-github footer-fa hover" aria-hidden="true"></i></a>
+                </li>
+              </ul>
+              <p> <i class="fa-regular fa-copyright"></i> 2022 Rume collins. </p>  
+        </div>
+    </footer>
     
+ 
 </body>
 </html>
