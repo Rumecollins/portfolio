@@ -52,6 +52,48 @@ modeToggle.addEventListener("click", function(){
      
 })
 
+   /*********    About page  *********/
+
+let i = 0
+let imageShow = [
+     "../image/img.jpg",
+     "../image/img1.jpg",
+     "../image/img2.jpg",
+     "../image/img3.jpg",
+     "../image/img4.jpg",
+     "../image/img5.jpg",
+     "../image/img6.jpg"
+]
+
+function changeImg(){
+     let slider = document.querySelector(".auto-slider")
+     slider.src = imageShow[i]
+     if ( i< (imageShow.length-1)) {
+          i++
+     } else {
+          i= 0
+     }
+     setTimeout("changeImg()", 2000)
+}
+
+window.onload = changeImg;
+
+
+let tabLinks = document.getElementsByClassName("tab-links")
+let tabContents = document.getElementsByClassName("tab-content")
+
+
+function openTab(tabname) {
+     for(tabLink of tabLinks){
+          tabLink.classList.remove("active-link");
+     }
+     for(tabContent of tabContents){
+          tabContent.classList.remove("active-tab");
+     }
+     event.currentTarget.classList.add("active-link");
+     document.getElementById(tabname).classList.add("active-tab")
+}
+
 
 
 
