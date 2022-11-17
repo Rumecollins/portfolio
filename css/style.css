@@ -782,7 +782,7 @@ h3{
 }
 @media (min-width:45em) {
   .slider-show{
-    margin-inline:auto;
+    margin: 0 auto;
     width: 55%;
     height: 65vh;
   }  
